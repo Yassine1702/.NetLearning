@@ -2,7 +2,7 @@
 {
     public class Produit
     {
-        public int Id { get; set; }
+        public String? Id { get; set; }
         public string Name { get; set; }
         public int Price { get; set; }
         public String Description { get; set; }

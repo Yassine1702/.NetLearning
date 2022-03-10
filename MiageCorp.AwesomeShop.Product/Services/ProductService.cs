@@ -1,5 +1,5 @@
 ﻿using MiageCorp.AwesomeShop.Product.Models;
-
+using MiageCorp.AwesomeShop.Product.Exceptions;
 namespace MiageCorp.AwesomeShop.Product.Services
 {
     public class ProductService : IProductService
@@ -14,19 +14,19 @@ namespace MiageCorp.AwesomeShop.Product.Services
             }
             else
             {
-                throw new InvalidDataException();
+                throw new ProductNotFoundException();
             }
 
         }
 
-        public void deleteProduct(int produitId)
+        public void deleteProduct(String produitId)
         {
             var prod = produits.SingleOrDefault(p => p.Id == produitId);
             produits.Remove(prod);
            
         }
 
-        public Produit getProductById(int produitId)
+        public Produit getProductById(String produitId)
         {
             return  produits.SingleOrDefault(p => p.Id == produitId);
         }
@@ -36,9 +36,9 @@ namespace MiageCorp.AwesomeShop.Product.Services
             return produits;
         }
 
-        public void updateProduct(Produit produit)
+        public void updateProduct(String id, Produit produit)
         {
-            var prod = produits.SingleOrDefault(p => p.Id == produit.Id);
+            var prod = produits.SingleOrDefault(p => p.Id == id);
             if(prod != null)
             {
                 if(produit.Name !=null) prod.Name = produit.Name;
@@ -48,7 +48,7 @@ namespace MiageCorp.AwesomeShop.Product.Services
             }
             else
             {
-                throw new InvalidDataException();
+                throw new ProductNotFoundException();
             }
         }
     }

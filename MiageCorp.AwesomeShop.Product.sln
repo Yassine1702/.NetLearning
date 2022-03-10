@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiageCorp.AwesomeShop.Produ
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiageCorp.AwesomeShop.Basket", "..\..\..\Desktop\miage-2022\MiageCorp.AwesomeShop.Basket\MiageCorp.AwesomeShop.Basket\MiageCorp.AwesomeShop.Basket.csproj", "{7E2B2BEC-1CD3-422D-B18C-91B664044A10}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{697E6CE5-C5A6-4996-9463-C31114B42220}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

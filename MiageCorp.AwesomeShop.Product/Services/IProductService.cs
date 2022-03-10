@@ -4,9 +4,9 @@ namespace MiageCorp.AwesomeShop.Product.Services
     public interface IProductService
     {
         void addProduct(Produit produit);
-        Produit getProductById(int id);
+        Produit getProductById(String id);
         List<Produit> getProducts();
-        void updateProduct(Produit produit);
-        void deleteProduct(int produitId);
+        void updateProduct(String id,Produit produit);
+        void deleteProduct(String produitId);
     }
 }
